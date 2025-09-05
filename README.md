@@ -137,4 +137,6 @@ O sistema será desenvolvido com **arquitetura monolítica em camadas**, garanti
 - Relatórios avançados (Excel, filtros por setor/período).  
 - Logs detalhados de auditoria para fins legais.
 
-###Alunas: Mariele Vieira da Silva e Maria Alice Giuliari
+
+
+Alunas: Mariele Vieira da Silva e Maria Alice Giuliari
