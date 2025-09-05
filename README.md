@@ -13,7 +13,7 @@ O sistema busca garantir **transparência, confiabilidade e agilidade** na gest�
 
 ---
 ## Gestão do Projeto
-- Trello
+- Trello (https://trello.com/invite/b/68bb0c0ee781a1a13dde298f/ATTI167e8d398c9f79057de7b6074c39a4c0BEED7813/sistema-de-batida-de-ponto-pac)
 - Jira
 - Figma [Visualize o design](https://www.figma.com/design/sXEnL56V3endmL5zdTqlTx/Consulth-Gerencimento-de-Ponto?node-id=0-1&m=dev&t=shpo0fjc9OVQwWEU-1)
 
@@ -79,10 +79,8 @@ Disponibilizar uma plataforma **centralizada e automatizada** para registro de p
 | **RNF04** | O sistema deve ser compatível com diferentes dispositivos. |
 | **RNF05** | O tempo de resposta das páginas não deve ultrapassar 5 segundos em condições normais. |
 | **RNF06** | O sistema deve utilizar banco de dados MySQL para armazenamento de dados. |
-| **RNF07** | O sistema deve armazenar registros com carimbo de data/hora de criação e atualização. |
-| **RNF08** | O sistema deve estar disponível durante todo o período de expediente. |
-| **RNF09** | O sistema deve ter arquitetura modular para possibilitar futuras expansões. |
-| **RNF10** | O sistema deve apresentar mensagens de erro claras e compreensíveis. |
+| **RNF07** | O sistema deve estar disponível durante todo o período de expediente. |
+| **RNF08** | O sistema deve apresentar mensagens de erro claras e compreensíveis. |
 
 ---
 
