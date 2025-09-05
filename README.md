@@ -135,4 +135,6 @@ O sistema será desenvolvido com **arquitetura monolítica em camadas**, garanti
 - Upload de documentos (atestados e justificativas).  
 - Notificações automáticas (alertas de ponto não registrado, inconsistências, etc.).  
 - Relatórios avançados (Excel, filtros por setor/período).  
-- Logs detalhados de auditoria para fins legais.  
+- Logs detalhados de auditoria para fins legais.
+
+###Alunas: Mariele Vieira da Silva e Maria Alice Giuliari
