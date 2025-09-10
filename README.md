@@ -14,7 +14,7 @@ O sistema busca garantir **transparência, confiabilidade e agilidade** na gest�
 ---
 ## Gestão do Projeto
 - Trello [Visualize aqui](https://trello.com/invite/b/68bb0c0ee781a1a13dde298f/ATTI167e8d398c9f79057de7b6074c39a4c0BEED7813/sistema-de-batida-de-ponto-pac)
-- Jira
+- Jira [Visualize aqui](https://mariele-silva.atlassian.net/jira/software/projects/SPP/code?atlOrigin=eyJpIjoiZjEwMmJhNjhlYzM2NGVhYmI4YTRiZjY5NGE5MTg1NWUiLCJwIjoiaiJ9)
 - Figma [Visualize o design](https://www.figma.com/design/sXEnL56V3endmL5zdTqlTx/Consulth-Gerencimento-de-Ponto?node-id=0-1&m=dev&t=shpo0fjc9OVQwWEU-1)
 
 
