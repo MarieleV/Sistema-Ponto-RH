@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import Cabecalho from "./components/Cabecalho";
 import BarraLateral from "./components/BarraLateral";
 
+import Login from "./pages/Login";
 import RegistroPonto from "./pages/RegistroPonto";
 import Indicadores from "./pages/Indicadores";
 import CartaoPonto from "./pages/CartaoPonto";
 import AjustarPonto from "./pages/AjustarPonto";
 import MinhasSolicitacoes from "./pages/MinhasSolicitacoes";
 import Configuracoes from "./pages/Configuracoes";
-import Sair from "./pages/Sair";
 
 function App() {
-  const [tela, setTela] = useState("registro");
+  const [tela, setTela] = useState("login"); // inicializa na tela de login
 
   const renderTela = () => {
     switch (tela) {
@@ -27,22 +27,33 @@ function App() {
         return <MinhasSolicitacoes />;
       case "config":
         return <Configuracoes />;
-      case "sair":
-        return <Sair />;
+      case "login":
+        return <Login onLogin={() => setTela("registro")} />; // login chama setTela
       default:
-        return <RegistroPonto />;
+        return <Login onLogin={() => setTela("registro")} />;
     }
   };
 
+  // Se estivermos na tela de login, não mostrar Cabecalho e BarraLateral
+  const isLogin = tela === "login";
+
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-      <Cabecalho usuario="Maria Alice Giuliari" />
+      {!isLogin && <Cabecalho usuario="Maria Alice Giuliari" />}
       <div style={{ display: "flex", flex: 1 }}>
-        <BarraLateral
-          onNavigate={setTela}
-          empresa="LIBRA COBRANÇAS EMPRESARIAIS LTDA"
-          cargo="ASSISTENTE ADMINISTRATIVO II"
-        />
+        {!isLogin && (
+          <BarraLateral
+            onNavigate={(item) => {
+              if (item === "sair") {
+                setTela("login"); // ao clicar em sair, vai para login
+              } else {
+                setTela(item);
+              }
+            }}
+            empresa="LIBRA COBRANÇAS EMPRESARIAIS LTDA"
+            cargo="ASSISTENTE ADMINISTRATIVO II"
+          />
+        )}
         <main style={{ flex: 1, padding: "20px" }}>{renderTela()}</main>
       </div>
     </div>
