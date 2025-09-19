@@ -28,7 +28,7 @@ function App() {
       case "config":
         return <Configuracoes />;
       case "login":
-        return <Login onLogin={() => setTela("registro")} />; // login chama setTela
+        return <Login onLogin={() => setTela("registro")} />; 
       default:
         return <Login onLogin={() => setTela("registro")} />;
     }
@@ -38,9 +38,9 @@ function App() {
   const isLogin = tela === "login";
  
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }} className="relative">
       {!isLogin && <Cabecalho usuario="Maria Alice Giuliari" />}
-      <div style={{ display: "flex", flex: 1 }}>
+      <div style={{ display: "flex", flex: 1 }} className="mt-16!">
         {!isLogin && (
           <BarraLateral
             onNavigate={(item) => {
@@ -54,7 +54,7 @@ function App() {
             cargo="ASSISTENTE ADMINISTRATIVO II"
           />
         )}
-        <main style={{ flex: 1, padding: "20px" }}>{renderTela()}</main>
+        <main style={{ flex: 1, padding: "20px" }} className="mt-20'">{renderTela()}</main>
       </div>
     </div>
   );

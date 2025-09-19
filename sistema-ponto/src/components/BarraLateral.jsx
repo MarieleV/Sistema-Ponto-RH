@@ -45,7 +45,7 @@ function BarraLateral({ onNavigate, empresa, cargo }) {
 const styles = {
     container: {
         width: "280px",
-        height: "100vh",
+        height: "100%",
         backgroundColor: "#fff",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         display: "flex",

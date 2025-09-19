@@ -1,16 +1,16 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import { FaBell } from "react-icons/fa"; // icone de notificacao
+import { FaRegBell } from "react-icons/fa6";
 
 function Header({ usuario }) {
     return (
-    <header style={styles.header}>
+    <header style={styles.header} className="absolute w-dvw h-16">
         <div style={styles.left}>
         <img src={logo} alt="Logo" style={styles.logo} />
         </div>
         <div style={styles.right}>
         <span style={styles.user}>{usuario}</span>
-        <FaBell style={styles.icon} />
+        <FaRegBell style={styles.icon} className="hover:fill-zinc-300"/>
         </div>
     </header>
     );

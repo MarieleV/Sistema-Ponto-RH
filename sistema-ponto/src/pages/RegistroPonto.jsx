@@ -3,15 +3,21 @@ import { RiUserLocationFill } from "react-icons/ri";
 
 function RegistroPonto() {
     return (
-    <div style={styles.container}>
+    <div style={styles.container} className="w-full h-full mt-20 flex flex-col bg-white rounded-lg overflow-hidden shadow-md">
       {/* Área de informações */}
-        <div style={styles.infoArea}>
-        <RiUserLocationFill style={styles.icon} />
-        <p style={styles.textoBold}>11/09/2025 - 12:00:05</p>
+        <div style={styles.infoArea} className="flex h-full w-full flex-col justify-end bg-zinc-100 pb-5 items-center gap-2">
+            <div className="flex w-full h-1/2 items-center justify-center pb-24!">
+                <RiUserLocationFill style={styles.icon}/>
+            </div>
+        
+        <div className="flex h-fit w-full justify-end items-center flex-col pb-8! gap-2">
+            <p style={styles.textoBold}>11/09/2025 - 12:00:05</p>
         <p style={styles.textoBold}>978.64 metros</p>
         <p style={styles.texto}>
         📍 Rua Ottokar Doerffel, Joinville, Santa Catarina, Brasil
         </p>
+        </div>
+        
         </div>
 
       {/* Área do botão */}
@@ -23,27 +29,8 @@ function RegistroPonto() {
 }
 
 const styles = {
-    container: {
-        width: "900px",       // um pouco mais largo
-        height: "80vh",       // um pouco mais alto
-        margin: "20px auto",
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "#fff",
-        borderRadius: "5px",
-        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-        overflow: "hidden",
-    },
-    infoArea: {
-        flex: "0 0 500px",    // aumenta a área de info
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        gap: "8px",           // espaçamento levemente maior
-        backgroundColor: "#f9fafb",
-        paddingBottom: "20px",
-    },
+    
+  
     buttonArea: {
         flex: "0 0 80px",     // área do botão
         display: "flex",
