@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import React, { useState } from "react";
 import logo from "../assets/Logo-Consulth.png";
  
@@ -168,12 +167,8 @@ const styles = {
     height: "100vh",
   },
   logoImg: {
-<<<<<<< HEAD
-    width: "300px",  // define a largura
-=======
     width: "300px",
->>>>>>> 24065d422acd94de794214b6b33b6f926a8d1ba1
-    height: "auto",  // mantém a proporção da imagem
+    height: "auto",
     objectFit: "contain",
   },
   modal: {
@@ -216,10 +211,5 @@ const styles = {
     transition: "background 0.2s",
   },
 };
-<<<<<<< HEAD
-
-export default Login;
-=======
  
 export default Login;
->>>>>>> 24065d422acd94de794214b6b33b6f926a8d1ba1
