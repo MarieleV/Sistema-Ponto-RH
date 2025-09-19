@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFilter, FaRegCalendarAlt } from "react-icons/fa";
-
+ 
 const Indicadores = () => {
   return (
     <main style={styles.main}>
@@ -11,7 +11,7 @@ const Indicadores = () => {
             Filtrar <FaFilter style={styles.iconFiltro} />
           </button>
         </div>
-
+ 
         <div style={styles.calendario}>
           <input type="date" id="inputCalendario" style={styles.inputCalendario} />
           <label htmlFor="inputCalendario" style={styles.iconCalendario}>
@@ -19,7 +19,7 @@ const Indicadores = () => {
           </label>
         </div>
       </div>
-
+ 
       {/* Gráficos fictícios */}
       <div style={styles.graficosContainer}>
         <div style={styles.graficoCard}>
@@ -34,7 +34,7 @@ const Indicadores = () => {
     </main>
   );
 };
-
+ 
 // Estilos inline
 const styles = {
   main: { flexGrow: 1, padding: "20px", paddingTop: "10px", overflowY: "auto", background: "#f6f6f7", minHeight: "100vh" },
@@ -50,5 +50,5 @@ const styles = {
   graficoCard: { width: "350px", background: "white", padding: "10px 20px 20px 20px", border: "1px solid #ddd", borderRadius: "2px", textAlign: "center", height: "220px", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", boxSizing: "border-box" },
   placeholderChart: { width: "160px", height: "160px", background: "#eee", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", color: "#666", fontSize: "14px" },
 };
-
+ 
 export default Indicadores;

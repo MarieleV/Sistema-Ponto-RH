@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFilter, FaRegCalendarAlt } from "react-icons/fa";
 import confirmarIcon from "../assets/Icon-Confirmado.png";
-
+ 
 const CartaoPonto = () => {
   return (
     <main style={styles.dashboardMain}>
@@ -12,7 +12,7 @@ const CartaoPonto = () => {
             Filtrar <FaFilter style={styles.icon} />
           </button>
         </div>
-
+ 
         <div style={styles.calendario}>
           <input type="date" id="inputCalendario" style={styles.inputCalendario} />
           <label htmlFor="inputCalendario" style={styles.iconCalendario}>
@@ -20,7 +20,7 @@ const CartaoPonto = () => {
           </label>
         </div>
       </div>
-
+ 
       {/* Tabela de ponto */}
       <table style={styles.tabelaPonto}>
         <thead>
@@ -103,7 +103,7 @@ const CartaoPonto = () => {
     </main>
   );
 };
-
+ 
 const styles = {
   dashboardMain: {
     flex: 1,
@@ -207,5 +207,5 @@ const styles = {
     background: "#fafafa",
   },
 };
-
+ 
 export default CartaoPonto;

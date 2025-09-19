@@ -1,12 +1,12 @@
 // src/pages/Login.jsx
 import React, { useState } from "react";
 import logo from "../assets/Logo-Consulth.png";
-
+ 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [showModal, setShowModal] = useState(false);
-
+ 
   const handleLogin = () => {
     // Apenas para testar, depois trocar por API
     if (email !== "usuario@teste.com" || senha !== "123456") {
@@ -15,14 +15,14 @@ const Login = ({ onLogin }) => {
       onLogin(); // chama o callback do App para ir para tela principal
     }
   };
-
+ 
   return (
     <div style={styles.paginaLogin}>
       <div style={styles.container}>
         {/* Lado esquerdo - Login */}
         <div style={styles.leftSection}>
           <h2 style={styles.titulo}>Fazer Login</h2>
-
+ 
           <div style={styles.formulario}>
             <label htmlFor="email" style={styles.label}>E-mail</label>
             <input
@@ -34,7 +34,7 @@ const Login = ({ onLogin }) => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
+ 
           <div style={styles.formulario}>
             <label htmlFor="senha" style={styles.label}>Senha</label>
             <input
@@ -46,7 +46,7 @@ const Login = ({ onLogin }) => {
               onChange={(e) => setSenha(e.target.value)}
             />
           </div>
-
+ 
           <div style={styles.botoesContainer}>
             <button style={styles.botaoLogin} onClick={handleLogin}>
               Entrar
@@ -58,13 +58,13 @@ const Login = ({ onLogin }) => {
             </div>
           </div>
         </div>
-
+ 
         {/* Lado direito - Logo */}
         <div style={styles.rightSection}>
           <img src={logo} alt="Logo" style={styles.logoImg} />
         </div>
       </div>
-
+ 
       {/* Modal de erro */}
       {showModal && (
         <div style={{ ...styles.modal, display: "flex" }}>
@@ -82,7 +82,7 @@ const Login = ({ onLogin }) => {
     </div>
   );
 };
-
+ 
 const styles = {
   paginaLogin: {
     display: "flex",
@@ -168,7 +168,11 @@ const styles = {
     height: "100vh",
   },
   logoImg: {
+<<<<<<< HEAD
     width: "300px",  // define a largura
+=======
+    width: "300px",
+>>>>>>> 24065d422acd94de794214b6b33b6f926a8d1ba1
     height: "auto",  // mantém a proporção da imagem
     objectFit: "contain",
   },
@@ -212,5 +216,10 @@ const styles = {
     transition: "background 0.2s",
   },
 };
+<<<<<<< HEAD
 
 export default Login;
+=======
+ 
+export default Login;
+>>>>>>> 24065d422acd94de794214b6b33b6f926a8d1ba1
