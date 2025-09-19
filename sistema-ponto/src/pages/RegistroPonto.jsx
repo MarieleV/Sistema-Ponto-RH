@@ -45,7 +45,7 @@ const styles = {
         paddingBottom: "20px",
     },
     buttonArea: {
-        flex: "0 0 80px",     // área do botão levemente maior
+        flex: "0 0 80px",     // área do botão
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
