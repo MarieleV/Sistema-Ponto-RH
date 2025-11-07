@@ -51,7 +51,7 @@ const Login = ({ onLogin }) => {
               Entrar
             </button>
             <div style={styles.alterarSenha}>
-              <a href="/alterar-senha" style={styles.linkSenha}>
+              <a href="/RecuperarSenha" style={styles.linkSenha}>
                 Esqueci minha senha
               </a>
             </div>
