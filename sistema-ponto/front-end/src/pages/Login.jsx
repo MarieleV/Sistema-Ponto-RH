@@ -1,27 +1,43 @@
 import React, { useState } from "react";
 import logo from "../assets/Logo-Consulth.png";
- 
-const Login = ({ onLogin }) => {
+
+const Login = ({ onLogin, onForgotPassword }) => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [showModal, setShowModal] = useState(false);
- 
+
   const handleLogin = () => {
-    // Apenas para testar, depois trocar por API
-    if (email !== "usuario@teste.com" || senha !== "123456") {
-      setShowModal(true);
-    } else {
-      onLogin(); // chama o callback do App para ir para tela principal
+    // LOGIN ADMIN
+    if (email === "admin@teste.com" && senha === "123456") {
+      onLogin({
+        id_usuario: 1,
+        email: email,
+        tipo_usuario: "Administrador",
+      });
+      return;
     }
+
+    // LOGIN FUNCIONÁRIO
+    if (email === "usuario@teste.com" && senha === "123456") {
+      onLogin({
+        id_usuario: 2,
+        email: email,
+        tipo_usuario: "Funcionario",
+      });
+      return;
+    }
+
+    setShowModal(true); // erro
   };
- 
+
   return (
     <div style={styles.paginaLogin}>
       <div style={styles.container}>
-        {/* Lado esquerdo - Login */}
+
+        {/* FORMULÁRIO */}
         <div style={styles.leftSection}>
           <h2 style={styles.titulo}>Fazer Login</h2>
- 
+
           <div style={styles.formulario}>
             <label htmlFor="email" style={styles.label}>E-mail</label>
             <input
@@ -33,7 +49,7 @@ const Login = ({ onLogin }) => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
- 
+
           <div style={styles.formulario}>
             <label htmlFor="senha" style={styles.label}>Senha</label>
             <input
@@ -45,34 +61,40 @@ const Login = ({ onLogin }) => {
               onChange={(e) => setSenha(e.target.value)}
             />
           </div>
- 
+
           <div style={styles.botoesContainer}>
             <button style={styles.botaoLogin} onClick={handleLogin}>
               Entrar
             </button>
+
+            {/* RECUPERAR SENHA */}
             <div style={styles.alterarSenha}>
-              <a href="/RecuperarSenha" style={styles.linkSenha}>
+              <a
+                href="#"
+                style={styles.linkSenha}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onForgotPassword();
+                }}
+              >
                 Esqueci minha senha
               </a>
             </div>
           </div>
         </div>
- 
-        {/* Lado direito - Logo */}
+
+        {/* LOGO */}
         <div style={styles.rightSection}>
           <img src={logo} alt="Logo" style={styles.logoImg} />
         </div>
       </div>
- 
-      {/* Modal de erro */}
+
+      {/* MODAL ERRO */}
       {showModal && (
         <div style={{ ...styles.modal, display: "flex" }}>
           <div style={styles.modalContent}>
             <p style={styles.mensagemErro}>Usuário Não Encontrado</p>
-            <button
-              style={styles.modalButton}
-              onClick={() => setShowModal(false)}
-            >
+            <button style={styles.modalButton} onClick={() => setShowModal(false)}>
               Voltar
             </button>
           </div>
@@ -81,135 +103,111 @@ const Login = ({ onLogin }) => {
     </div>
   );
 };
- 
+  
 const styles = {
   paginaLogin: {
     display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     height: "100vh",
-    fontFamily: "'Inter', sans-serif",
+    backgroundColor: "#f4f4f4",
   },
   container: {
     display: "flex",
-    width: "100%",
+    width: "900px",
+    backgroundColor: "#ffffff",
+    borderRadius: "10px",
+    overflow: "hidden",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
   },
   leftSection: {
-    width: "50%",
-    backgroundColor: "#F6F6F7",
+    flex: 1,
+    padding: "40px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+  },
+  rightSection: {
+    width: "40%",
+    backgroundColor: "#000",
+    display: "flex",
     alignItems: "center",
-    padding: "40px",
-    color: "black",
+    justifyContent: "center",
+  },
+  logoImg: {
+    width: "220px",
   },
   titulo: {
-    fontSize: "35px",
-    fontWeight: 600,
-    marginBottom: "40px",
+    fontSize: "28px",
+    fontWeight: "700",
+    marginBottom: "20px",
   },
   formulario: {
-    width: "100%",
-    maxWidth: "300px",
-    marginBottom: "25px",
+    marginBottom: "20px",
+    display: "flex",
+    flexDirection: "column",
   },
   label: {
-    display: "block",
-    fontSize: "1rem",
+    fontWeight: "600",
     marginBottom: "8px",
-    fontWeight: 600,
-    color: "#333",
   },
   inputField: {
-    width: "100%",
     padding: "12px",
+    borderRadius: "6px",
     border: "1px solid #ccc",
-    borderRadius: "5px",
-    background: "#f9f9f9",
-    fontSize: "1.1rem",
-    outline: "none",
-    transition: "border-color 0.3s ease",
+    fontSize: "16px",
   },
   botoesContainer: {
-    width: "100%",
-    maxWidth: "300px",
+    marginTop: "20px",
   },
   botaoLogin: {
     width: "100%",
-    maxWidth: "200px",
-    padding: "10px 25px",
-    backgroundColor: "black",
-    color: "white",
+    padding: "12px",
+    backgroundColor: "#000",
+    color: "#fff",
     border: "none",
-    fontSize: "22px",
-    fontWeight: 600,
+    borderRadius: "6px",
     cursor: "pointer",
-    textAlign: "center",
-    borderRadius: "5px",
-    marginTop: "5px",
-    transition: "background-color 0.2s",
-  },
-  alterarSenha: {
-    marginTop: "20px",
-    textAlign: "center",
+    fontSize: "16px",
+    marginBottom: "15px",
   },
   linkSenha: {
     color: "#000",
-    textDecoration: "none",
-    fontSize: "16px",
+    textDecoration: "underline",
     cursor: "pointer",
   },
-  rightSection: {
-    width: "50%",
-    backgroundColor: "black",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-  },
-  logoImg: {
-    width: "300px",
-    height: "auto",
-    objectFit: "contain",
+  alterarSenha: {
+    textAlign: "center",
   },
   modal: {
     position: "fixed",
     top: 0,
     left: 0,
-    width: "100%",
-    height: "100%",
+    width: "100vw",
+    height: "100vh",
     background: "rgba(0,0,0,0.5)",
     justifyContent: "center",
     alignItems: "center",
-    zIndex: 999,
   },
   modalContent: {
     background: "#fff",
-    padding: "40px 30px",
-    borderRadius: "12px",
+    padding: "20px",
+    borderRadius: "8px",
     textAlign: "center",
-    boxShadow: "0px 4px 12px rgba(0,0,0,0.3)",
-    width: "500px",
-    maxWidth: "100%",
+    width: "300px",
   },
   mensagemErro: {
-    color: "black",
-    fontSize: "30px",
-    marginBottom: "30px",
-    whiteSpace: "normal",
+    color: "red",
+    marginBottom: "15px",
   },
   modalButton: {
-    background: "black",
+    padding: "10px 20px",
+    backgroundColor: "#000",
+    color: "#fff",
     border: "none",
-    padding: "15px 25px",
-    cursor: "pointer",
-    color: "white",
     borderRadius: "6px",
-    fontSize: "22px",
-    display: "block",
-    margin: "0 auto",
-    marginTop: "10px",
-    transition: "background 0.2s",
+    cursor: "pointer",
   },
 };
- 
+
 export default Login;
