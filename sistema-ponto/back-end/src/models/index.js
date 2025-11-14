@@ -1,6 +1,6 @@
 const sequelize = require("../config/database");
 
-const Usuario = require("./Usuario");
+const Usuario = require("./usuario");
 const Administrador = require("./Administrador");
 const Funcionario = require("./Funcionario");
 const RegistroPonto = require("./RegistroPonto");

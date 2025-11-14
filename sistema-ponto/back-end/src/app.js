@@ -4,7 +4,7 @@ const routes = require("./routes"); // importa index.js de routes
 
 const app = express();
 
-app.use(cors());
+app.use(cors());// ligação com o front-end
 app.use(express.json());
 
 // Rotas principais
