@@ -1,10 +1,18 @@
-import express from "express";
-import cors from "cors";
-import routes from "./routes/routes.js";
+const express = require("express");
+const cors = require("cors");
+const routes = require("./routes"); // importa index.js de routes
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
-app.use(routes);
 
-app.listen(3000, () => console.log("API rodando na porta 3000"));
+// Rotas principais
+app.use("/api", routes);
+
+// Rota básica de status
+app.get("/", (req, res) => {
+    res.json({ mensagem: "API do Sistema de Ponto funcionando!" });
+});
+
+module.exports = app;
