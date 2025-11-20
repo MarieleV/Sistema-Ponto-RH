@@ -1,5 +1,13 @@
 # Sistema de Registro de Ponto Eletrônico  
 
+## PAC - Projeto de Aprendizagem Colaborativa Extensionista do Curso de Engenharia de Software da Católica de Santa Catarina
+
+
+Alunas: Mariele Vieira da Silva e Maria Alice Teles Giuliari
+
+Professores orientadores: Luiz Carlos Camargo e Claudinei Dias
+
+---
 ## Descrição Geral  
 O projeto propõe um sistema corporativo de **registro de ponto eletrônico**, focado em simplificar e organizar a gestão da jornada dos colaboradores.  
 
@@ -31,7 +39,6 @@ Disponibilizar uma plataforma **centralizada e automatizada** para registro de p
 - Segurança e autenticação baseada em perfis.  
 
 ---
-
 ## Público-alvo e Principais Funcionalidades  
 
 ### Colaboradores:  
@@ -48,6 +55,9 @@ Disponibilizar uma plataforma **centralizada e automatizada** para registro de p
 - Ajustar registros manualmente.  
 - Exportar relatórios em PDF.  
 - Cadastrar novos colaboradores.  
+
+---
+## Justificativa 
 
 ---
 
@@ -140,4 +150,3 @@ O sistema será desenvolvido com **arquitetura monolítica em camadas**, garanti
 
 ---
 
-Alunas: Mariele Vieira da Silva e Maria Alice Giuliari
