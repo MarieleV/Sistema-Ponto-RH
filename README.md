@@ -58,6 +58,26 @@ Disponibilizar uma plataforma **centralizada e automatizada** para registro de p
 
 ---
 ## Justificativa 
+O PAC foi desenvolvido com o objetivo de de atender a uma necessidade identificada no setor de RH da empresa CONSULTH Soluções Empresariais: a falta de um sistema simples e confiável para registrar batidas de ponto, organizar justificativas de ausência e acompanhar a frequência de trabalho dos funcionários. A solução proposta visa reduzir retrabalho, padronizar o processo e oferecer mais agilidade no controle de horas.
+
+---
+## Descrição do APP
+O projeto consiste em uma aplicação web para registro e gerenciamento de ponto eletrônico, em que os funcionários pdoem realizar batidas de entrade e saída, visualizar seus registros e enviar justificativas, e o setor de RH, que possui um acesso administrativo, consegue consultar frequências, editar batidas, avaliar justificativas enviadas pelos funcionários e gerar relatórios. 
+
+---
+## Requisitos para Preparar o Ambiente de Desenvolvimento
+**Ferramentas Necessárias:**
+- Node.js + React + Tailwind
+- NPM
+- MySQL
+- Git
+
+**Passos Básicos:**
+1. Clonar o repositório.
+2. Instalar dependências com `npm install`.
+3. Configurar o arquivo `.env` com credenciais do banco e JWT.
+4. Criar o banco de dados e rodar o script de criação das tabelas.
+5. Iniciar o servidor com `npm start`. 
 
 ---
 
