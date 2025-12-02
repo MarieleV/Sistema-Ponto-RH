@@ -65,6 +65,37 @@ O PAC foi desenvolvido com o objetivo de de atender a uma necessidade identifica
 O projeto consiste em uma aplicação web para registro e gerenciamento de ponto eletrônico, em que os funcionários pdoem realizar batidas de entrade e saída, visualizar seus registros e enviar justificativas, e o setor de RH, que possui um acesso administrativo, consegue consultar frequências, editar batidas, avaliar justificativas enviadas pelos funcionários e gerar relatórios. 
 
 ---
+## Telas Principais 
+
+### Tela de Login
+<img width="1600" height="823" alt="image" src="https://github.com/user-attachments/assets/29cbd8d7-ccb2-4c20-aafc-2fc9342fd6b6" />
+
+Permite com que os usuários acessem o sistema por meio de email e senha.
+
+### Tela de Batida de Ponto
+![tela_incluir_ponto](https://github.com/user-attachments/assets/63266ccf-feef-4fa4-ae70-b0aaa9a05f64)
+
+Possibilita o registro das entradas, saídas e intervalos do colaborador.
+
+### Tela de Ajueste de Ponto 
+![tela_ajustar_ponto](https://github.com/user-attachments/assets/edbadc55-7709-44b5-8a91-c01b7ab5d8ad)
+
+Permite que o colaborador envie uma solicitação de ajuste de ponto ao administrador, descrevendo sua justificativa e anexando documentos.
+
+### Tela de Gestão de Justificativas 
+![tela_admin3](https://github.com/user-attachments/assets/89a3d979-345d-44f8-ad12-0a29422f3170)
+
+Fornece a visualização das listagens das justificativas negadas e aceitas, além das que foram recentemente feitas. 
+
+Ao clicar em cada categoria, acontece o redirecionamento para a respectiva listagem: 
+
+### Tela de Justificativas Aceitas
+
+![tela_admin4](https://github.com/user-attachments/assets/287f50bb-2dff-41f6-836b-d682ab0b6783)
+
+
+
+---
 ## Requisitos para Preparar o Ambiente de Desenvolvimento
 **Ferramentas Necessárias:**
 - Node.js + React + Tailwind
