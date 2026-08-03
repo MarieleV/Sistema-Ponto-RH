@@ -28,7 +28,7 @@
 
 <div align="center">
 
-### 🧭 Sumário
+### 📑 Sumário
 
 [Descrição Geral](#-descrição-geral) • [Gestão do Projeto](#-gestão-do-projeto) • [Objetivo Geral](#-objetivo-geral) • [Público-alvo](#-público-alvo-e-principais-funcionalidades) • [Justificativa](#-justificativa) • [Telas Principais](#-telas-principais) • [Ambiente de Desenvolvimento](#-requisitos-para-preparar-o-ambiente-de-desenvolvimento) • [Requisitos Funcionais](#-requisitos-funcionais-rf) • [Requisitos Não Funcionais](#-requisitos-não-funcionais-rnf) • [Arquitetura](#-arquitetura-do-sistema) • [Infraestrutura](#-planejamento-de-infraestrutura) • [Fluxos de Negócio](#-fluxos-de-negócio-resumidos) • [Funcionalidades Futuras](#-funcionalidades-futuras)
 
